@@ -10,9 +10,15 @@ cc.Class({
         text: 'Hello, World!'
     },
 
+    createParticleSystem () {
+        var node = new cc.Node();
+        cc.director.getScene().addChild(node);
+        var particleSystem = node.addComponent(cc.ParticleSystem);
+        node.setPosition(0, 0);
+    },
     // use this for initialization
     onLoad: function () {
-        this.labl.string = this.text;
+        // this.labl.string = this.text;
     },
 
     // called every frame
